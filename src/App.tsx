@@ -35,7 +35,7 @@ class App extends Component {
             </Route>
 
             <Route path="/signUp">
-              <SignUp></SignUp>
+              <SignUp ></SignUp>
             </Route>
 
           </Switch>

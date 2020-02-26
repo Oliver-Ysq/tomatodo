@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, Button, Icon } from 'antd';
 import axios from '../../config/axios';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './signup.scss';
 
 interface ISignUpState {
@@ -36,7 +36,7 @@ class SignUp extends React.Component<any, ISignUpState> {//第一个参数是pro
         password,
         password_confirmation: passwordConformation
       });
-      console.log('succeeded');
+      this.props.history.push('/');
     } catch (e) {
       throw new Error(e);
     }
@@ -54,10 +54,10 @@ class SignUp extends React.Component<any, ISignUpState> {//第一个参数是pro
         />
         <Input.Password placeholder="请输入密码" value={password} onChange={this.onChangePassword} />
         <Input.Password placeholder="请再次输入密码" value={passwordConformation} onChange={this.onChangePasswordConformation} />
-        <Button type="primary" className="loginBtn" onClick={this.submit}> 注册</Button>
+        <Button type="primary" className="signUpBtn" onClick={this.submit}> 注册</Button>
         <p>如果已有账号，请立即<Link to="/login">登录</Link></p>
       </div >
     );
   }
 }
-export default SignUp;
+export default withRouter(SignUp);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class Index extends Component {
 

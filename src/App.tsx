@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import Index from './components/Index/Index';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
+import history from './config/history';
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div>
 
           {/* <nav>

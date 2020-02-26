@@ -1,18 +1,43 @@
 import React, { Component } from 'react';
 import { Button } from 'antd';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import axios from '../../config/axios';
 
-class Index extends Component {
 
-  login = () => {
-    console.log(this.props);
+interface IIndexState {
+  user: any;
+}
+
+class Index extends Component<any, IIndexState> {
+
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      user: ''
+    };
+  }
+
+  async componentWillMount() {
+    await this.getMe();
+  }
+  logout = () => {
+    localStorage.setItem('x-token', '');
+    this.props.history.push('/login');
   };
+  getMe = async () => {
+    try {
+      const response = await axios.get('me');
+      this.setState({ user: response.data });
+    } catch (e) { }
+  };
+
   render() {
     return (
       <div>
-        <Button onClick={this.login}><Link to="/login">登录</Link></Button>
+        <p>欢迎，{this.state.user.account}</p>
+        <Button onClick={this.logout}>登出</Button>
       </div>
     );
   }
 }
-export default Index;
+export default withRouter(Index);

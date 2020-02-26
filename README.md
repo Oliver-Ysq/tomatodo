@@ -1,44 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 项目收获
+1. 项目搭建：使用create-react-app脚手架，antd，typescript，sass，axios构建项目
+2. don't repeat yourself：类似功能的抽离，UI组件化
+### JS
+1. async await的使用（配合axios）
+### React Router
+1. withRouter
+   - 坑点：组件的props打印出来为`{}`，于是google得到解答
+   - 作用：把不是通过路由切换过来的组件中，将react-router 的 history、location、match 三个对象传入props对象上
+   - 用法：
+     ```
+     import {withRouter} from 'react-router-dom'
+     class Cpn extends Component{...}
+     export default withRouter(Cpn)
+     ``` 
+2. exact
+   - 作用：同样是为了增加准确性。当路由路径出现丝毫不同都会报错
+3. history
+   - this.props.history.push(url)
+   - 作用：实现编程跳转
+4. 如何在组件外部获取history进行跳转？？？？
+  - 起初：使用pushstate，仅仅改变了url未进行跳转； 使用window.location.href='xx'强制跳转，但会刷新页面
+  - 解决方法：在github中找到对应方法
+  ```
+  //history.js
+  import { createBrowserHistory } from 'history';
+  const history = createBrowserHistory();
+  export default history;
+  //index.js
+  import history from './history.js'
+  <Router history={history}>  //监听了history的变化
+    <Route></Route>...
+  </Router>
+  ```
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### axios
+1. create 创建一个axios对象
+   ```
+   const instance = axios.create({
+   baseURL: 'xxx',
+   headers: { 'value':key }
+   });
+   ```
+2. interceptors 拦截器
+   1. instance.interceptors.request.use(function,function)  //对get进行处理
+      - 第一个参数为请求成功的回调，第二个为失败的回调。
+      - 函数的参数为resolve或reject中传递的参数
+   2.  instance.interceptors.response.use(function,function)  //对post进行处理
+       - 参数同上

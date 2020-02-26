@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Index from './components/Index/Index';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 
 class App extends Component {
-  render (){
+  render() {
     return (
       <Router>
-      <div>
+        <div>
 
-        {/* <nav>
+          {/* <nav>
           <ul>
             <li>
               <Link to="/">index</Link>
@@ -24,26 +24,26 @@ class App extends Component {
           </ul>
         </nav> */}
 
-        <Switch>
-          {/* 首页 */}
-          <Route exact={true} path="/">
-            <Index></Index>
-          </Route>
+          <Switch>
+            {/* 首页 */}
+            <Route exact={true} path="/">
+              <Index></Index>
+            </Route>
 
-          <Route path="/login">
-            <Login></Login>
-          </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
 
-          <Route path="/signUp">
-            <SignUp></SignUp>
-          </Route>
+            <Route path="/signUp">
+              <SignUp></SignUp>
+            </Route>
 
-        </Switch>
+          </Switch>
 
-      </div>
-    </Router>
-    
-    )
+        </div>
+      </Router>
+
+    );
   }
 }
 

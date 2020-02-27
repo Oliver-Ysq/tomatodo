@@ -3,7 +3,8 @@ import TodoInput from './TodoInput';
 import axios from '../../config/axios';
 import './todos.scss';
 import TodoItem from './TodoItem';
-
+import { connect } from 'react-redux';
+import { addTodo } from '../../redux/actions';
 
 interface ITodosState {
   todos: any;
@@ -82,7 +83,7 @@ class Todos extends Component<any, ITodosState> {
   public render() {
     return (
       <div id="Todos">
-        <TodoInput addTodo={(params: any) => this.addTodo(params)} />
+        <TodoInput />
         <div className="todoList">
           {this.unCompletedTodos.map((item: any) => {
             return (
@@ -109,4 +110,14 @@ class Todos extends Component<any, ITodosState> {
     );
   }
 }
-export default Todos;
+
+const mapStateToProps = (state: any, ownProps: any) => ({
+  todos: state.todos,
+  ...ownProps
+});
+const mapDispatchToProps = {
+  addTodo
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Todos);

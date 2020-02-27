@@ -34,6 +34,7 @@
     <Route></Route>...
   </Router>
   ```
+### React Redux
 
 ### axios
 1. create 创建一个axios对象

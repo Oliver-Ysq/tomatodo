@@ -38,7 +38,7 @@ class Index extends Component<any, IIndexState> {
     };
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     await this.getMe();
   }
 

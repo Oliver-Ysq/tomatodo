@@ -3,6 +3,8 @@
 2. don't repeat yourself：类似功能的抽离，UI组件化
 ### JS
 1. async await的使用（配合axios）
+### React
+1. <Cpn {...obj}> ： 把obj的所有属性传入Cpn作为props
 ### React Router
 1. withRouter
    - 坑点：组件的props打印出来为`{}`，于是google得到解答

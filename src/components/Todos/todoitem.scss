@@ -1,0 +1,47 @@
+#TodoItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 8px;
+  border-bottom: 1px solid #ddd;
+
+  &:hover {
+    background: #f9f9f9;
+  }
+
+  &.editing {
+    background: #fff3d2;
+  }
+
+  &.completed {
+    .text {
+      text-decoration: line-through;
+    }
+  }
+
+  &:first-child {
+    border-top: 1px solid #ddd;
+  }
+
+  >.text,
+  >.editing {
+    flex: 1;
+  }
+
+  >.editing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >input {
+      border: 0;
+      outline: none;
+      background: transparent;
+    }
+
+    >.iconWrapper>.anticon {
+      margin-right: 8px;
+      color: #a9a9a9; //改变颜色
+      cursor: pointer; //变成手型
+    }
+  }
+}

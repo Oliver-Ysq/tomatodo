@@ -49,3 +49,6 @@
       - 函数的参数为resolve或reject中传递的参数
    2.  instance.interceptors.response.use(function,function)  //对post进行处理
        - 参数同上
+### SCSS
+1. calc()
+   - 例：`width: calc(50% - 8px)`， 可以实现**百分比**和**像素**混用

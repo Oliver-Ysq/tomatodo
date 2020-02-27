@@ -16,6 +16,16 @@ class Todos extends Component<any, ITodosState> {
       todos: []
     };
   }
+  get unDeletedTodos() {
+    return this.state.todos.filter((item: any) => !item.deleted);
+  }
+  get unCompletedTodos() {
+    return this.unDeletedTodos.filter((item: any) => !item.completed);
+  }
+  get completedTodos() {
+    return this.unDeletedTodos.filter((item: any) => item.completed);
+  }
+
   addTodo = async (params: any) => {
     const { todos } = this.state;
     try {
@@ -73,8 +83,8 @@ class Todos extends Component<any, ITodosState> {
     return (
       <div id="Todos">
         <TodoInput addTodo={(params: any) => this.addTodo(params)} />
-        <main>
-          {this.state.todos.map((item: any) => {
+        <div className="todoList">
+          {this.unCompletedTodos.map((item: any) => {
             return (
               <TodoItem
                 key={item.id} {...item}
@@ -84,7 +94,17 @@ class Todos extends Component<any, ITodosState> {
             );
           })
           }
-        </main>
+          {this.completedTodos.map((item: any) => {
+            return (
+              <TodoItem
+                key={item.id} {...item}
+                update={this.updateTodo}
+                toEditing={this.toEditing}
+              />
+            );
+          })
+          }
+        </div>
       </div>
     );
   }

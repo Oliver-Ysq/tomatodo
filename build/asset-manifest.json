@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/tomatodo/build/static/css/main.88caf0e3.chunk.css",
-    "main.js": "/tomatodo/build/static/js/main.c8b0afc3.chunk.js",
-    "main.js.map": "/tomatodo/build/static/js/main.c8b0afc3.chunk.js.map",
-    "runtime-main.js": "/tomatodo/build/static/js/runtime-main.6fd9821c.js",
-    "runtime-main.js.map": "/tomatodo/build/static/js/runtime-main.6fd9821c.js.map",
-    "static/css/2.b645d18a.chunk.css": "/tomatodo/build/static/css/2.b645d18a.chunk.css",
-    "static/js/2.03e10bd7.chunk.js": "/tomatodo/build/static/js/2.03e10bd7.chunk.js",
-    "static/js/2.03e10bd7.chunk.js.map": "/tomatodo/build/static/js/2.03e10bd7.chunk.js.map",
-    "index.html": "/tomatodo/build/index.html",
-    "precache-manifest.3f581a8155efae1d82aac8e2b39f97f3.js": "/tomatodo/build/precache-manifest.3f581a8155efae1d82aac8e2b39f97f3.js",
-    "service-worker.js": "/tomatodo/build/service-worker.js",
-    "static/css/2.b645d18a.chunk.css.map": "/tomatodo/build/static/css/2.b645d18a.chunk.css.map",
-    "static/css/main.88caf0e3.chunk.css.map": "/tomatodo/build/static/css/main.88caf0e3.chunk.css.map",
-    "static/js/2.03e10bd7.chunk.js.LICENSE.txt": "/tomatodo/build/static/js/2.03e10bd7.chunk.js.LICENSE.txt"
+    "main.css": "/tomatodo/static/css/main.88caf0e3.chunk.css",
+    "main.js": "/tomatodo/static/js/main.dfa2ffe8.chunk.js",
+    "main.js.map": "/tomatodo/static/js/main.dfa2ffe8.chunk.js.map",
+    "runtime-main.js": "/tomatodo/static/js/runtime-main.ff8a7632.js",
+    "runtime-main.js.map": "/tomatodo/static/js/runtime-main.ff8a7632.js.map",
+    "static/css/2.b645d18a.chunk.css": "/tomatodo/static/css/2.b645d18a.chunk.css",
+    "static/js/2.74b0f6c3.chunk.js": "/tomatodo/static/js/2.74b0f6c3.chunk.js",
+    "static/js/2.74b0f6c3.chunk.js.map": "/tomatodo/static/js/2.74b0f6c3.chunk.js.map",
+    "index.html": "/tomatodo/index.html",
+    "precache-manifest.5786cd10981334a716f4c7e30c6a3c0e.js": "/tomatodo/precache-manifest.5786cd10981334a716f4c7e30c6a3c0e.js",
+    "service-worker.js": "/tomatodo/service-worker.js",
+    "static/css/2.b645d18a.chunk.css.map": "/tomatodo/static/css/2.b645d18a.chunk.css.map",
+    "static/css/main.88caf0e3.chunk.css.map": "/tomatodo/static/css/main.88caf0e3.chunk.css.map",
+    "static/js/2.74b0f6c3.chunk.js.LICENSE.txt": "/tomatodo/static/js/2.74b0f6c3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6fd9821c.js",
+    "static/js/runtime-main.ff8a7632.js",
     "static/css/2.b645d18a.chunk.css",
-    "static/js/2.03e10bd7.chunk.js",
+    "static/js/2.74b0f6c3.chunk.js",
     "static/css/main.88caf0e3.chunk.css",
-    "static/js/main.c8b0afc3.chunk.js"
+    "static/js/main.dfa2ffe8.chunk.js"
   ]
 }

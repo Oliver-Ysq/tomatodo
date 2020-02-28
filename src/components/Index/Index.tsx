@@ -55,7 +55,7 @@ class Index extends Component<any, IIndexState> {
     return (
       <div className="Index" id="Index">
         <header>
-          <span className="logo">LOGO</span>
+          <span className="logo">TomatoDo — 在线待办事项工具</span>
           <Dropdown overlay={menu}>
             <span>{this.state.user && this.state.user.account}
               <Icon type="down" style={{ marginLeft: 8 }} />

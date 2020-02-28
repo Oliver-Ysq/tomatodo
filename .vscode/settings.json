@@ -2,5 +2,8 @@
   "cSpell.words": [
     "antd",
     "esnext"
+  ],
+  "cSpell.ignoreWords": [
+    "tomatodo"
   ]
 }

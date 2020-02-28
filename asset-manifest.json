@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Oliver-Ysq.github.io/tomatodo/static/css/main.88caf0e3.chunk.css",
+    "main.js": "/Oliver-Ysq.github.io/tomatodo/static/js/main.18e32b1c.chunk.js",
+    "main.js.map": "/Oliver-Ysq.github.io/tomatodo/static/js/main.18e32b1c.chunk.js.map",
+    "runtime-main.js": "/Oliver-Ysq.github.io/tomatodo/static/js/runtime-main.ecb22d01.js",
+    "runtime-main.js.map": "/Oliver-Ysq.github.io/tomatodo/static/js/runtime-main.ecb22d01.js.map",
+    "static/css/2.b645d18a.chunk.css": "/Oliver-Ysq.github.io/tomatodo/static/css/2.b645d18a.chunk.css",
+    "static/js/2.cb42e19a.chunk.js": "/Oliver-Ysq.github.io/tomatodo/static/js/2.cb42e19a.chunk.js",
+    "static/js/2.cb42e19a.chunk.js.map": "/Oliver-Ysq.github.io/tomatodo/static/js/2.cb42e19a.chunk.js.map",
+    "index.html": "/Oliver-Ysq.github.io/tomatodo/index.html",
+    "precache-manifest.7c2d0230dce9e122d907d59ac8d7b91d.js": "/Oliver-Ysq.github.io/tomatodo/precache-manifest.7c2d0230dce9e122d907d59ac8d7b91d.js",
+    "service-worker.js": "/Oliver-Ysq.github.io/tomatodo/service-worker.js",
+    "static/css/2.b645d18a.chunk.css.map": "/Oliver-Ysq.github.io/tomatodo/static/css/2.b645d18a.chunk.css.map",
+    "static/css/main.88caf0e3.chunk.css.map": "/Oliver-Ysq.github.io/tomatodo/static/css/main.88caf0e3.chunk.css.map",
+    "static/js/2.cb42e19a.chunk.js.LICENSE.txt": "/Oliver-Ysq.github.io/tomatodo/static/js/2.cb42e19a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ecb22d01.js",
+    "static/css/2.b645d18a.chunk.css",
+    "static/js/2.cb42e19a.chunk.js",
+    "static/css/main.88caf0e3.chunk.css",
+    "static/js/main.18e32b1c.chunk.js"
+  ]
+}

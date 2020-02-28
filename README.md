@@ -8,3 +8,4 @@
 - Redux
 - Typescript
 - Axios
+- antd库
